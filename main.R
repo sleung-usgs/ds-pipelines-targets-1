@@ -8,16 +8,11 @@ library(whisker)
 # REQUIREMENT: working dir must be same as dir where main.R is located
 outer_dir <- getwd()
 
-print('source the following files:')
-for (dir in list('1_fetch', '2_process', '3_visualize')) {
-  setwd(file.path(outer_dir, dir, 'src'))
-  src_files <- list.files(pattern='\\.R$')
-  print(paste('in ', getwd(), ': ', sep=""))
-  print(src_files)
-  sapply(src_files, source)
+src_files <- Sys.glob('*/src/*.R')
+for (f in src_files) {
+  print(paste("sourcing", f))
+  source(f)
 }
-
-setwd(outer_dir)
 
 sbid <- '5d925066e4b0c4f70d0d0599' 
 
