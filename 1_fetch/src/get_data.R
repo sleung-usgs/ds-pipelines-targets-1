@@ -1,7 +1,7 @@
 # Get the data from ScienceBase
-get_data_from_sb <- function(sbid, outer_dir){
-  data_filepath <- file.path(outer_dir, '1_fetch', 'out', 'model_RMSEs.csv')
-  item_file_download(sbid, names = 'me_RMSE.csv', destinations = data_filepath, overwrite_file = TRUE)
-  
-  return(data_filepath)
+download_data <- function(out_filepath) {
+  sbid <- "5d925066e4b0c4f70d0d0599"
+  item_file_download(sbid, names = "me_RMSE.csv", destinations = out_filepath, overwrite_file = TRUE)
+
+  return(out_filepath)
 }
