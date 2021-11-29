@@ -2,4 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
-*/out/
+*/out/*
+_targets
