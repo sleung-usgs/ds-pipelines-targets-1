@@ -28,7 +28,7 @@ list(
   # Save the processed data
   tar_target(
     model_summary_results_csv,
-    write_csv(out_filepath = "2_process/out/model_summary_results.csv", data = eval_data), 
+    save_csv(out_filepath = "2_process/out/model_summary_results.csv", data = eval_data), 
     format = "file"
   ),
   # Save the model diagnostics

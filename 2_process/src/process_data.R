@@ -16,7 +16,7 @@ process_data <- function(in_filepath) {
 }
 
 # Save the processed data
-write_csv <- function(out_filepath, data) {
+save_csv <- function(out_filepath, data) {
   readr::write_csv(data, file = out_filepath)
 
   return(out_filepath)
