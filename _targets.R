@@ -4,8 +4,8 @@ for (f in src_files) {
   print(paste("sourcing", f))
   source(f)
 }
-tar_option_set(packages = c("miceadds", "readr", "stringr",
-                            "tidyverse", "sbtools", "whisker"))
+tar_option_set(packages = c("readr", "stringr", "tidyverse",
+                            "sbtools", "whisker"))
 
 list(
   # Get the data from ScienceBase
